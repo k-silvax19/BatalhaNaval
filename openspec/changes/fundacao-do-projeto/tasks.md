@@ -2,10 +2,10 @@
 
 ## 1. Base Angular e ferramentas
 
-- [ ] 1.1 Verificar disponibilidade do Angular 22.2.0 e compatibilidade de CLI, Node, TypeScript, Tailwind/PostCSS e Lucide Angular; confirmar pelas versões e requisitos publicados um conjunto instalável sem forçar conflitos e consultar o desenvolvedor se houver bloqueio.
-- [ ] 1.2 Criar a aplicação Angular na raiz, com bootstrap Standalone, Zoneless e convenção de Signals para estado mutável; verificar compilação inicial e ausência de `zone.js` nas dependências e polyfills, preservando orientações e configurações existentes.
-- [ ] 1.3 Configurar npm e lockfile, scripts de desenvolvimento/build/testes e executor suportado pelo CLI; verificar `npm ci`, `npm run build` e `npm test -- --watch=false`, mantendo somente verificação mínima de bootstrap se necessária ao executor.
-- [ ] 1.4 Substituir o README inicial pela apresentação do projeto, pré-requisitos e instruções de instalação e execução; verificar que os comandos documentados correspondem aos scripts disponíveis e às versões efetivamente adotadas.
+- [x] 1.1 Verificar disponibilidade do Angular 22.2.0 e compatibilidade de CLI, Node, TypeScript, Tailwind/PostCSS e Lucide Angular; confirmar pelas versões e requisitos publicados um conjunto instalável sem forçar conflitos e consultar o desenvolvedor se houver bloqueio.
+- [x] 1.2 Criar a aplicação Angular na raiz, com bootstrap Standalone, Zoneless e convenção de Signals para estado mutável; verificar compilação inicial e ausência de `zone.js` nas dependências e polyfills, preservando orientações e configurações existentes.
+- [x] 1.3 Configurar npm e lockfile, scripts de desenvolvimento/build/testes e executor suportado pelo CLI; verificar `npm ci`, `npm run build` e `npm test -- --watch=false`, mantendo somente verificação mínima de bootstrap se necessária ao executor.
+- [x] 1.4 Substituir o README inicial pela apresentação do projeto, pré-requisitos e instruções de instalação e execução; verificar que os comandos documentados correspondem aos scripts disponíveis e às versões efetivamente adotadas.
 
 ## 2. Estilos e página inicial
 
