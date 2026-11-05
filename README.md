@@ -37,6 +37,8 @@ O build gera os arquivos estáticos em `dist/batalha-naval/browser/`. Os testes 
 
 - Angular **22.2.0**, componentes Standalone e execução Zoneless, sem `zone.js`.
 - TypeScript **6.0**, com verificações estritas.
+- Tailwind CSS **4** via PostCSS para estilos responsivos.
+- Lucide Angular com importação individual de ícones.
 - Signals como convenção para estado reativo e `computed` para valores derivados quando necessário. A página estática inicial não precisa de estado mutável.
 - Nomes de métodos e variáveis autorais e textos de interface em português.
 
@@ -51,3 +53,24 @@ src/
 public/            Arquivos estáticos
 openspec/          Planejamento e especificações por change
 ```
+
+## Escopo atual
+
+Esta versão entrega somente a fundação técnica e uma página inicial responsiva que apresenta o modo jogador contra computador. **Ainda não é possível iniciar ou jogar uma partida.**
+
+Não fazem parte desta etapa:
+
+- tabuleiros e coordenadas;
+- posicionamento de navios;
+- ataques, turnos e condições de vitória;
+- estratégia do adversário automático;
+- persistência de partidas.
+
+## Próximas fases
+
+1. Modelar e testar as regras do jogo.
+2. Entregar uma partida completa contra o computador com posicionamento automático.
+3. Adicionar posicionamento manual da frota.
+4. Refinar acessibilidade, responsividade e experiência da partida.
+
+Regras citadas durante a exploração inicial, como tabuleiro 10 x 10, composição da frota, permissão de navios adjacentes e comportamento dos turnos, continuam sendo propostas. Elas deverão ser confirmadas e especificadas antes da implementação do jogo.

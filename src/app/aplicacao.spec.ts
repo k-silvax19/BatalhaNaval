@@ -4,7 +4,7 @@ import { Aplicacao } from './aplicacao';
 import { configuracaoAplicacao } from './aplicacao.config';
 
 describe('Inicialização da aplicação', () => {
-  it('renderiza o conteúdo principal com a configuração Zoneless de produção', async () => {
+  it('apresenta o modo contra o computador sem oferecer início de partida', async () => {
     await TestBed.configureTestingModule({
       imports: [Aplicacao],
       providers: configuracaoAplicacao.providers,
@@ -15,6 +15,10 @@ describe('Inicialização da aplicação', () => {
 
     const elemento = componente.nativeElement as HTMLElement;
     expect(elemento.querySelector('main')).not.toBeNull();
-    expect(elemento.querySelector('h1')?.textContent?.trim()).toBeTruthy();
+    expect(elemento.querySelector('h1')?.textContent).toContain('Batalha');
+    expect(elemento.textContent).toContain('Jogador vs. computador');
+    expect(elemento.textContent).toContain('partidas ainda estão em desenvolvimento');
+    expect(elemento.querySelector('button:not([disabled]), a[href]')).toBeNull();
+    expect(elemento.querySelectorAll('svg[aria-hidden="true"]').length).toBe(3);
   });
 });

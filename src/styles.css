@@ -1,7 +1,37 @@
+@import "tailwindcss";
+
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
 }
 
 body {
   margin: 0;
+}
+
+.grade-oceanica {
+  background-image:
+    linear-gradient(rgb(103 232 249 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(103 232 249 / 0.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to right, black, transparent 78%);
+}
+
+.texto-contorno {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(103 232 249 / 0.75);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [lucideRadar] {
+    animation: pulso-radar 3s ease-in-out infinite;
+  }
+}
+
+@keyframes pulso-radar {
+  50% {
+    opacity: 0.55;
+    transform: rotate(8deg);
+  }
 }
