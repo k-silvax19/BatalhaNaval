@@ -56,21 +56,18 @@ openspec/          Planejamento e especificações por change
 
 ## Escopo atual
 
-Esta versão entrega somente a fundação técnica e uma página inicial responsiva que apresenta o modo jogador contra computador. **Ainda não é possível iniciar ou jogar uma partida.**
+Esta versão entrega a fundação técnica, uma página inicial responsiva, regras puras de domínio para coordenadas, frota, posicionamento e ataques, um motor TypeScript puro para o ciclo da partida, uma API para gerar frotas automaticamente e uma interface jogável contra o computador. A preparação usa `Math.random` por padrão e permite injetar uma fonte de escolhas para obter gerações reproduzíveis nos testes; ela não promete distribuição estatística uniforme.
 
-Não fazem parte desta etapa:
+Ainda não fazem parte desta etapa:
 
-- tabuleiros e coordenadas;
-- posicionamento de navios;
-- ataques, turnos e condições de vitória;
-- estratégia do adversário automático;
+- posicionamento manual da frota;
+- níveis de dificuldade e estratégia avançada do computador;
 - persistência de partidas.
 
 ## Próximas fases
 
-1. Modelar e testar as regras do jogo.
-2. Entregar uma partida completa contra o computador com posicionamento automático.
-3. Adicionar posicionamento manual da frota.
-4. Refinar acessibilidade, responsividade e experiência da partida.
+1. Adicionar posicionamento manual da frota.
+2. Refinar acessibilidade, responsividade e experiência da partida.
+3. Explorar níveis de dificuldade e persistência de partidas.
 
-Regras citadas durante a exploração inicial, como tabuleiro 10 x 10, composição da frota, permissão de navios adjacentes e comportamento dos turnos, continuam sendo propostas. Elas deverão ser confirmadas e especificadas antes da implementação do jogo.
+As regras de domínio adotam tabuleiro 10 x 10, frota padrão e permitem navios adjacentes sem sobreposição. O motor coordena turnos e encerramento sem escolher ataques; na interface, o computador escolhe aleatoriamente entre coordenadas ainda não atacadas.
